@@ -1,0 +1,30 @@
+{
+    "bundles": {
+        "dist/app-build": {
+            "includes": [
+                "[*.js]",
+                "*.html!text",
+                "*.css!text"
+            ],
+            "options": {
+                "inject": true,
+                "minify": true,
+                "depCache": true,
+                "rev": false
+            }
+        },
+        "dist/aurelia": {
+            "includes": [
+                "babel-polyfill",
+                "aurelia-framework",
+                "aurelia-bootstrapper"
+            ],
+            "options": {
+                "inject": true,
+                "minify": true,
+                "depCache": false,
+                "rev": false
+            }
+        }
+    }
+}
