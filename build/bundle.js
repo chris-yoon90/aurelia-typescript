@@ -1,6 +1,8 @@
 import gulp from 'gulp';
-import bundler from 'aurelia-bundler';
+
 import bundles from './bundles.json'
+
+var bundler = require('aurelia-bundler');
 
 var config = {
     force: true,
@@ -9,10 +11,11 @@ var config = {
     bundles: bundles.bundles
 };
 
-gulp.task('bundle', ['build'], function() {
-    return bundler.bundle(config);
-});
-
 gulp.task('unbundle', function() {
     return bundler.unbundle(config);
 });
+
+gulp.task('bundle', ['unbundle', 'build'], function() {
+    return bundler.bundle(config);
+});
+

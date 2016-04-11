@@ -13,6 +13,7 @@ System.config({
     "aurelia-framework": "npm:aurelia-framework@1.0.0-beta.1.2.1",
     "babel-polyfill": "npm:babel-polyfill@6.7.4",
     "material-design-lite": "github:google/material-design-lite@1.1.3",
+    "text": "github:systemjs/plugin-text@0.0.7",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },

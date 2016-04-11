@@ -13,7 +13,7 @@
                 "rev": false
             }
         },
-        "dist/aurelia": {
+        "dist/vendor": {
             "includes": [
                 "babel-polyfill",
                 "aurelia-framework",
