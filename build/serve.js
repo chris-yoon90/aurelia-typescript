@@ -12,7 +12,7 @@ gulp.task('serve', ['build'], function(done) {
     open: false,
     port: 9000,
     server: {
-      baseDir: ['./'],
+      baseDir: ['.'],
       middleware: function(req, res, next) {
         res.setHeader('Access-Control-Allow-Origin', '*');
         next();
@@ -25,4 +25,17 @@ gulp.task('serve', ['build'], function(done) {
   gulp.watch([config.index, config.html], ['html-watch']);
 });
 
-
+gulp.task('serve-bundle', ['bundle'], function(done) {
+  browserSync({
+    online: false,
+    open: false,
+    port: 9000,
+    server: {
+      baseDir: ['.'],
+      middleware: function(req, res, next) {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        next();
+      }
+    }
+  }, done);
+});

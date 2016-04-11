@@ -1,14 +1,17 @@
 {
   "scripts": {
     "rimraf": "rimraf",
-    "prebuild": "npm run clean.dist",
+    "prestart": "npm run clean.dist",
     "start": "gulp serve",
     "postinstall": "jspm install && typings install",
     "clean.dist": "npm run rimraf -- dist",
     "clean": "npm cache clean && npm run rimraf -- typings dist jspm_packages node_modules",
+    "prebuild": "npm run clean.dist",
     "build": "gulp build",
     "prebundle": "npm run clean.dist",
     "bundle": "gulp bundle",
+    "preserve-bundle": "npm run clean.dist",
+    "serve-bundle": "gulp serve-bundle",
     "unbundle": "gulp unbundle"
   },
   "jspm": {
