@@ -12,9 +12,7 @@
     <script src="jspm_packages/system.js"></script>
     <script src="config.js"></script>
     <script>
-        System.import('babel-polyfill').then(function() {
-            System.import('aurelia-bootstrapper');
-        }, console.error.bind(console));
+        System.import('aurelia-bootstrapper').then(null, console.error.bind(console));
     </script>
   </body>
 </html>

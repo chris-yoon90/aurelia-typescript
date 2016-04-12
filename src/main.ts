@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import {Aurelia} from 'aurelia-framework';
 
 export function configure(aurelia: Aurelia): void {
