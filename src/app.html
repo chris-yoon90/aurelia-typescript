@@ -1,8 +1,13 @@
 <template>
+    <require from="./child-component"></require>
+    
     <h1>Hello World</h1>
 
     <input value.bind="firstName">
     <input value.bind="lastName">
 
     <button click.trigger="sayHello()">Say Hello</button>
+    
+    <child-component name.bind="firstName"></child-component>
+
 </template>
