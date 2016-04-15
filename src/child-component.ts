@@ -5,7 +5,7 @@ import { App } from './app';
 @autoinject
 export class ChildComponent {
     private store: Redux.Store
-    @bindable name: string = null;
+    @bindable firstName: string;
     message: string = "I'm child";
     
     constructor(appParent: App) {
